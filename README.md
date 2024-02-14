@@ -41,15 +41,17 @@ Alternatively, follow these instructions for [setting up git in Rstudio](https:/
 
 To reproduce the analysis: 
 
-1. Review the `data/README.txt` and download the raw data from the [Chicago Data Portal](https://data.cityofchicago.org/Transportation/CTA-Ridership-L-Station-Entries-Daily-Totals/5neh-572f/about_data) 
+1. Review the `data/README.txt` and download the raw data from the [Chicago Data Portal](https://data.cityofchicago.org/Transportation/CTA-Ridership-L-Station-Entries-Daily-Totals/5neh-572f/about_data)
 
-2. Pre-process the raw data using `R/00_00_pre_process_data.R.
+2. Pre-process the raw data using `R/00_pre_process_data.R`
 
-3. Next, run `R/01_cta_ridership_analysis.R` to run the analysis.
+3. Next, run `R/01_cta_ridership_analysis.R` to run the analysis
 
 ## Results / Output
 
-The output of the analysis will identify the CTA stations with the most riders from August 2019 - October 2023. This will be as a figure in `results/figures/2019_2023_top_3_stations.png`
+The output of the analysis will identify the CTA stations with the most riders from August 2019 - October 2023. 
+
+The resulting figure will output to `results/figures/2019_2023_top_3_stations.png`
 
 
 
