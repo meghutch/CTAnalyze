@@ -16,4 +16,4 @@ cta_data_19 <- cta_data %>%
   filter(date_format >= "2019-08-01")
 
 # save processed data
-write.csv(cta_data_19, file = "processed_data/2019_2024_cta_ridership_data.csv", row.names = FALSE)
+write.csv(cta_data_19, file = "processed_data/2019_2023_cta_ridership_data.csv", row.names = FALSE)
