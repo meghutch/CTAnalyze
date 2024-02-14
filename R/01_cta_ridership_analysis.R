@@ -1,5 +1,6 @@
 library(tidyverse)
 library(ggplot2)
+library(lubridate)
 
 # Objective: Visualize the pre and post pandemic ridership trends of the Chicago Transit Authority
 
@@ -16,9 +17,15 @@ station_counts <- cta_data_19 %>%
   arrange(desc(total_rides)) %>% 
   head(3)
 
+# summarize by month for the top 3 stations
+cta_data_19 %>% 
+  filter(stationname %in% station_counts$stationname) %>% 
+  mutate(month = lubridate::floor_date(date_format, "month")) %>%
+  summarize(monthly_rides = sum(rides), .by=c(station_id, stationname, month))
+
 # plot the ridership trends overtime
 cta_rides <- ggplot(cta_data_19 %>% 
-         filter(stationname %in% station_counts$stationname), 
+                      filter(stationname %in% station_counts$stationname), 
        aes(x = date_format, y = rides, group = stationname, color = stationname)) +
   geom_smooth(method = "loess") +
   ylab("Daily Riders") +
