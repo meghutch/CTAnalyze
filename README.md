@@ -53,5 +53,7 @@ The output of the analysis will identify the CTA stations with the most riders f
 
 The resulting figure will output to `results/figures/2019_2023_top_3_stations.png`
 
+<img src="https://github.com/meghutch/CTAnalyze/blob/main/results/figures/2019_2023_top_3_stations.png" width="500"/>
+
 
 
